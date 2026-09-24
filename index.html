@@ -1,216 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peter Veres | Homepage</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-white text-gray-800 font-sans">
-    <!-- Hero Section -->
-    <section class="bg-blue-100 py-12 px-6 text-center">
-      <img
-        src="kepek/pv3.jpg"
-        alt="Profile"
-        class="w-28 h-28 mx-auto rounded-full shadow-md"
-      />
-      <h1 class="text-3xl font-bold mt-4">Péter Veres</h1>
-      <p class="text-gray-700 mt-2 text-lg">
-        Page on high energy astrophysics
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Péter Veres | Homepage</title>
+  <style>
+    /* ============================================================
+       To change colors, fonts, or spacing for the WHOLE site,
+       edit the values below. Otherwise you shouldn't need to
+       touch anything in this <style> block.
+       This version is intentionally plain: one column, one font,
+       thin lines between sections, no boxes or background colors.
+       ============================================================ */
+    :root {
+      --text: #222222;
+      --muted: #6b6b6b;
+      --accent: #333333;
+      --bg: #ffffff;
+      --rule: #dddddd;
+      --max-width: 680px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 3rem 1.5rem;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+    a { color: var(--accent); text-decoration: underline; text-decoration-color: var(--rule); }
+    a:hover { text-decoration-color: var(--accent); }
+    h1, h2, h3 { font-weight: normal; line-height: 1.3; }
+    main { max-width: var(--max-width); margin: 0 auto; }
+    section { padding: 2rem 0; border-top: 1px solid var(--rule); }
+    section:first-of-type { border-top: none; padding-top: 0; }
+    h2 { font-size: 1.15rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .muted { color: var(--muted); }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding-bottom: 2rem;
+    }
+    header img {
+      width: 84px; height: 84px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    header h1 { font-size: 1.7rem; margin: 0 0 0.2rem; }
+    header p.tagline { color: var(--muted); margin: 0 0 0.4rem; font-size: 1rem; }
+    header .links a { margin-right: 1rem; font-size: 0.95rem; }
+
+    /* Topics list */
+    ul.topics { list-style: none; padding: 0; margin: 0; }
+    ul.topics li { margin-bottom: 0.35rem; }
+    ul.topics li::before { content: "· "; color: var(--muted); }
+
+    /* Publications */
+    .pub { margin-bottom: 1.3rem; }
+    .pub .title { font-weight: bold; }
+    .pub .meta { color: var(--muted); font-size: 0.95rem; }
+
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      padding-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+<main>
+
+  <!-- ============================================================
+       HEADER — name, tagline, top links.
+       ============================================================ -->
+  <header>
+    <img src="kepek/pv3.jpg" alt="Péter Veres" />
+    <div>
+      <h1>Péter Veres</h1>
+      <p class="tagline">High-energy astrophysics — gamma-ray bursts and multi-messenger astronomy</p>
+      <div class="links">
+        <a href="https://ui.adsabs.harvard.edu/public-libraries/2yxsTYlETwi3JS0B-6mdSQ" target="_blank">Publications</a>
+        <a href="mailto:peter.veres@uah.edu">Contact</a>
+        <a href="https://twitter.com/veresp" target="_blank">Twitter / X</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       ABOUT — edit this paragraph freely.
+       ============================================================ -->
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I'm an Assistant Professor at the
+      <a href="https://www.uah.edu/science/departments/space-science" target="_blank">Department of Space Science</a>,
+      <a href="http://www.uah.edu" target="_blank">University of Alabama in Huntsville</a>. I spend most of my time
+      chasing <a href="http://en.wikipedia.org/wiki/Gamma-ray_burst" target="_blank">gamma-ray bursts</a> — the
+      brightest explosions in the universe — and thinking about what they can tell us, on their own or together
+      with gravitational waves and high-energy neutrinos. Along the way I've also gotten drawn into active galactic
+      nuclei, magnetar giant flares, and the intergalactic magnetic field. I got my PhD from
+      <a href="https://www.elte.hu/en/" target="_blank">Eötvös University</a> in Budapest in 2011, then did
+      postdocs at Penn State and George Washington University before joining the faculty here.
+    </p>
+  </section>
+
+  <!-- ============================================================
+       RESEARCH INTERESTS — add/remove <li> lines as needed.
+       ============================================================ -->
+  <section>
+    <h2>Research Interests</h2>
+    <ul class="topics">
+      <li>Gamma-ray burst prompt emission &amp; jet composition</li>
+      <li>Gamma-ray burst polarization</li>
+      <li>Gravitational wave counterparts</li>
+      <li>High-energy neutrinos from gamma-ray bursts</li>
+      <li>GRBs as cosmological probes</li>
+      <li>Magnetar giant flares</li>
+      <li>Intergalactic magnetic fields</li>
+      <li>High-energy emission from active galactic nuclei</li>
+      <li>Spectral &amp; temporal analysis techniques</li>
+    </ul>
+  </section>
+
+  <!-- ============================================================
+       SELECTED PUBLICATIONS — a short, curated highlight list.
+       Each entry: bold title, then journal/year, then an arXiv/ADS link.
+       Full list always lives at the ADS library link in the header.
+       To add one: copy a whole <div class="pub"> ... </div> block
+       and edit the text inside it.
+       ============================================================ -->
+  <section>
+    <h2>Selected Recent Publications</h2>
+
+    <div class="pub">
+      <div class="title">Polarization Measurement of Gamma-ray Bursts with Fermi-GBM: The Case of GRB 180720B</div>
+      <div class="meta">Veres, P., Duvall, W., Goldstein, A., Briggs, M. S., Grove, J. E. (2024)</div>
+      <a href="https://arxiv.org/abs/2408.13199" target="_blank">arXiv:2408.13199</a>
+    </div>
+
+    <div class="pub">
+      <div class="title">Non-detection of Neutrinos from the BOAT: Improved Constraints on the Parameters of GRB 221009A</div>
+      <div class="meta">Veres, P., Fraija, N., Lesage, S., Goldstein, A., Briggs, M. S., Bhat, P. N. — ApJ, 1006, 201 (2026)</div>
+      <a href="https://arxiv.org/abs/2408.16748" target="_blank">arXiv:2408.16748</a>
+    </div>
+
+    <div class="pub">
+      <div class="title">An Ordinary Short Gamma-Ray Burst with Extraordinary Implications: Fermi-GBM Detection of GRB 170817A</div>
+      <div class="meta">Goldstein, A., Veres, P. et al. — ApJL, 848, 14 (2017)</div>
+      <a href="https://arxiv.org/abs/1710.05446" target="_blank">arXiv:1710.05446</a>
+    </div>
+
+    <div class="pub">
+      <div class="title">Fermi-GBM Observations of GRB 230307A: An Exceptionally Bright Long-duration GRB with an Associated Kilonova</div>
+      <div class="meta">Dalessi, S., Veres, P. et al. — ApJ, 994, 17 (2025)</div>
+      <a href="https://arxiv.org/abs/2507.12637" target="_blank">arXiv:2507.12637</a>
+    </div>
+
+    <div class="pub">
+      <div class="title">Fermi-GBM Discovery of GRB 221009A: An Extraordinarily Bright GRB from Onset to Afterglow</div>
+      <div class="meta">Lesage, S., Veres, P. et al. — ApJL, 952, 42 (2023)</div>
+      <a href="https://arxiv.org/abs/2303.14172" target="_blank">arXiv:2303.14172</a>
+    </div>
+
+    <div class="pub">
+      <div class="title">Extreme Variability in a Long-duration Gamma-Ray Burst Associated with a Kilonova</div>
+      <div class="meta">Veres, P., Bhat, P. N. et al. — ApJL, 954, 5 (2023)</div>
+      <a href="https://arxiv.org/abs/2305.12262" target="_blank">arXiv:2305.12262</a>
+    </div>
+
+    <div class="pub">
+      <div class="title">Rapid Spectral Variability of a Giant Flare from a Magnetar in NGC 253</div>
+      <div class="meta">Roberts, O. J., Veres, P. et al. — Nature, 589, 207 (2021)</div>
+      <a href="https://arxiv.org/abs/2101.05146" target="_blank">arXiv:2101.05146</a>
+    </div>
+
+    <div class="pub">
+      <div class="title">Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A</div>
+      <div class="meta">Abbott, B. P. et al. (incl. Veres, P.) — ApJL, 848, 13 (2017)</div>
+      <a href="https://arxiv.org/abs/1710.05834" target="_blank">arXiv:1710.05834</a>
+    </div>
+
+    <p class="muted">
+      Full publication list on
+      <a href="https://ui.adsabs.harvard.edu/public-libraries/2yxsTYlETwi3JS0B-6mdSQ" target="_blank">ADS</a>.
+    </p>
+  </section>
+
+  <!-- ============================================================
+       CURRENT PROJECTS — brief, ongoing/half-baked ideas.
+       Keep or trim as they progress.
+       ============================================================ -->
+  <section>
+    <h2>Current Projects</h2>
+
+    <div class="pub">
+      <div class="title">Fast NICER follow-up for magnetar central engines</div>
+      <p class="muted">
+        What powers a GRB? The central engine is widely thought to be a black hole, but a highly magnetized
+        neutron star (a magnetar) is a viable alternative. In some scenarios, a pulsating magnetar signal would
+        appear in X-rays within an hour of the trigger — we use NICER observations to search for it.
       </p>
-      <div class="mt-4 space-x-4">
-        <a
-          href="https://bit.ly/2J8YEjb"
-          class="text-blue-700 hover:underline"
-          target="_blank"
-          >Publication List</a
-        >
-        <a
-          href="mailto:peter.veres@uah.edu"
-          class="text-blue-700 hover:underline"
-          target="_blank"
-          >Contact me</a
-        >
-        <a
-          href="https://twitter.com/veresp"
-          class="text-blue-700 hover:underline"
-          target="_blank"
-          >Twitter</a
-        >
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Me -->
-    <section class="max-w-3xl mx-auto py-10 px-6">
-      <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-      <p class="mb-4">
-          I am an assistant professor at the
-          <a 
-          class="text-blue-600 hover:underline"
-          target="_blank"
-	  href="https://www.uah.edu/science/departments/space-science">Department of Space Science</a>
-          <a href="http://www.uah.edu">University of Alabama in Huntsville</a>.
-          My field of reseach is 
-	  <a
-          href="http://en.wikipedia.org/wiki/Gamma-ray_burst">gamma-ray bursts</a>,
-	  the brightest explosions in the universe. I am also interested in other astrophysical phenomena 
-	  like active galaxies, gravitational waves and fast radio bursts.
-          I got my PhD from the
-          <a 
-          class="text-blue-600 hover:underline"
-          target="_blank"
-	  href="https://www.elte.hu/en/">
-          Eötvös University</a>,
-          Budapest in 2011. 
-      </p>
-      </p>
-    </section>
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section>
+    <h2>Get in Touch</h2>
+    <p>
+      Always looking for motivated students and collaborators. Feel free to reach out if you'd like to work
+      together, chat, or just say hello.
+    </p>
+    <p>
+      📧 <a href="mailto:peter.veres@uah.edu">peter.veres@uah.edu</a><br />
+      Room 2040, Cramer Research Hall — University of Alabama in Huntsville
+    </p>
+  </section>
 
-    <!-- Skills -->
-    <section class="bg-gray-50 py-10 px-6">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-4">Topics I am interested in</h2>
-        <ul class="list-disc list-inside grid gap-2 md:grid-cols-2">
-          <li>Gamma-ray burst polarization</li>
-          <li>GRB emission mechanism</li>
-          <li>Gravitational wave counterparts</li>
-          <li>Neutrino counterparts</li>
-          <li>GRBs as cosmological probes</li>
-          <li>Intergalactic Magnetic fields</li>
-          <li>Magnetar Giant Flares</li>
-          <li>High energy radiation from active galactic nuclei</li>
-          <li>Spectral and temporal analysis techniques</li>
-        </ul>
-      </div>
-    </section>
+</main>
 
-    <!-- Projects -->
-    <section class="max-w-3xl mx-auto py-10 px-6">
-      <h2 class="text-2xl font-semibold mb-4">Recent Projects and half-baked ideas</h2>
+  <footer>
+    &copy; 2026 Péter Veres
+  </footer>
 
-      <div class="space-y-6">
-        <div>
-          <h3 class="text-xl font-semibold"> GRB 220910A - the BOAT</h3>
-          <p class="text-gray-700 mb-1"> This GRB was the brightest of all time. Stephen Lesage lead ths paper where we unfolded the instrumental effects and characterized the burst. 
-                                                      </p>
-          <a
-            href="https://ui.adsabs.harvard.edu/abs/2017ApJ...848L..14G/abstract"
-            class="text-blue-600 hover:underline"
-            target="_blank"
-            >GBM paper</a
-          >
-        </div>
-	 <div class="space-y-6">
-        <div>
-          <h3 class="text-xl font-semibold"> GRB polarization</h3>
-          <p class="text-gray-700 mb-1"> This is a re-heating of an idea proposed by Mark McConnell for BATSE: use Earth's atmosphere as a polarimeter. For some GRBs the photons scatter off the atmosphere before reaching the instrument. The scattering is polarization-sensitive so you can tease out some polarization info.
-                                                      </p>
-          <a
-            href="http"
-            class="text-blue-600 hover:underline"
-            target="_blank"
-            >Paper draft</a
-          >
-        </div>
- <div class="space-y-6">
-        <div>
-          <h3 class="text-xl font-semibold"> Fast NICER observations to find the pulsating magnetar central engine </h3>
-          <p class="text-gray-700 mb-1"> What powers the GRB? The so-called central engine is widely considered to be a black hole. There is an alternative however, that is capable of releasing the required 10<sup>52</sup> erg/s energy. This is a highly magnetized neutron star, a <b>magnetar</b>. In some scenarios the pulsating signal from a magnetar would show up in X-rays within an hour of the trigger. We use NICER observations to look for this signature.
-                                                      </p>
-          <a
-            href="http"
-            class="text-blue-600 hover:underline"
-            target="_blank"
-            >no draft yet</a
-          >
-        </div>
- <div class="space-y-6">
-        <div>
-          <h3 class="text-xl font-semibold"> Neutrinos from the BOAT</h3>
-          <p class="text-gray-700 mb-1"> High energy neutrinos, 10 TeV to &gt;1 TeV, are detected by IceCube, at theh South Pole, but their origin is not clear. They could be a wide variety of astrophysical sources, like AGN, tidal disruption events, star forming galaxies, supernovae, and gamma-ray bursts. GRBs fell out of favor according to the most recent studies, but they are still borderline a viable class. However if you were to detect neutrinos from any one source, the BOAT GRB 221009a is your best bet. No conincident events have been found, which doesn't bode well for GRBs as neutrino sources.
-                                                      </p>
-          <a
-            href=""
-            class="text-blue-600 hover:underline"
-            target="_blank"
-            >draft</a
-          >
-        </div>
-
-	<div>
-          <h3 class="text-xl font-semibold">Intergalactic magnetic field</h3>
-          <p class="text-gray-700 mb-1">
-          The IGMF is a very weak magnetic field (1E-20 to 1e-15 Gauss) , present in the voids. It can be studied using active galaxies and GRBs having high energy photons.
-          </p>
-          <a
-            href="https://ui.adsabs.harvard.edu/abs/2017ApJ...847...39V/abstract"
-            class="text-blue-600 hover:underline"
-            target="_blank"
-            >IGMF paper</a
-          >
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold"> GRB 170817A</h3>
-          <p class="text-gray-700 mb-1">
-                                            1.7 seconds after the first neutron star binary merger was
-                                detected by LIGO-Virgo, Fermi-GBM triggered on GRB 170817A. The
-                                GRB is short, close by, and has the same source as the
-                                gravitational wave signal. This is the first unambiguous
-                                gravitational wave - electromagnetic radiation detection.
-          </p>
-          <a
-            href="https://ui.adsabs.harvard.edu/abs/2017ApJ...848L..14G/abstract"
-            class="text-blue-600 hover:underline"
-            target="_blank"
-            >GBM paper</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="bg-blue-50 py-10 px-6">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-2xl font-semibold mb-4">Get in Touch</h2>
-        <p class="mb-4">
-          Always looking for motivated students and collaborators. Feel free to reach out if you'd like to work with me,  chat, or just say hello!
-        </p>
-        <p>
-          📧
-          <a
-            href="mailto:peter.veres@uah.edu"
-            class="text-blue-600 hover:underline"
-            >peter.veres@uah.edu</a
-          >
-	   room 2040 in Cramer Research Hall - University of Alabama in Huntsville
-        </p>
-<!--        <div class="mt-4 space-x-4">
-          <a
-            href="https://github.com/yourusername"
-            class="text-blue-600 hover:underline"
-            target="_blank"
-            >GitHub</a
-          >
-          <a
-            href="https://linkedin.com/in/yourusername"
-            class="text-blue-600 hover:underline"
-            target="_blank"
-            >LinkedIn</a
-          >
-          <a
-            href="https://twitter.com/veresp"
-            class="text-blue-600 hover:underline"
-            target="_blank"
-            >Twitter</a
-          >
-        </div> -->
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center text-sm py-4 text-gray-500">
-      &copy; 2025 Peter Veres. Built with ❤️ using Tailwind CSS.
-    </footer>
-  </body>
+</body>
 </html>
-
